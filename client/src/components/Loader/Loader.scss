@@ -1,0 +1,51 @@
+:root {
+    --main-color: transparent;
+    --loader-color: #1F6FEB;
+    --back-color: transparent;
+    --time: 3s;
+    --size: 2px;
+  }
+  
+  .loader {
+    background-color: var(--main-color);
+    overflow: hidden;
+    width: 100%;
+    height: 2px;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: flex-start;  
+    z-index: 100000;
+  }
+  
+  .loader__element {
+      height: var(--size);
+      width: 100%;
+      background: var(--back-color);
+  
+  }
+  
+  .element {
+    position: absolute;
+    left: 0%;
+    display: block;
+    background-color: var(--loader-color);
+    height: var(--size);
+    width: 20%;
+    animation: getWidth var(--time) infinite running;
+  }
+  
+  @keyframes getWidth {
+      0% { left: -20%; }
+      50% { left: 40%; }
+      100% { left: 100%; }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .loader {
+      height: 3px;
+      width: 40%;
+    }
+  }

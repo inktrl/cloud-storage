@@ -1,0 +1,429 @@
+@import '../../assets/css/colors.scss';
+
+// .nav-buttons {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     margin-bottom: 20px;
+//     &__left {
+//         display: flex;
+//         align-items: flex-end;
+//         div {
+//             margin-right: 20px;
+//             i {
+//                 font-weight: bold;
+//             }
+//             span {
+//                 font-size: .8rem;
+//                 color: $color-icon-active;
+//             }
+//         }
+//     }
+//     &__right {
+//         .button-green {
+//             display: inline-block;
+//             margin-left: 10px;
+//             background-color: $color-green;
+//             border-color: $color-green-border;
+//             color: white;
+//             &:hover {
+//                 background-color: $color-green-border;
+//             }
+//             i {
+//                 margin: 0 10px 0 0;
+//             }
+//         }
+//     }
+// }
+
+.table-grid-file {
+    
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr 1fr 1fr;
+        margin-bottom: 10px;
+    }
+    &__body {
+        color: white;
+        font-weight: 300;
+        padding: 10px 0;
+        cursor: pointer;
+        min-height: 60px;
+        height: fit-content;
+        font-size: 10pt;
+        display: grid;
+        grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+        -ms-flex-align: center;
+        align-items: center;
+
+        
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr 1fr 1fr;
+        border-radius: 6px;
+        &:hover {
+            background-color: $color-border;
+        }
+        &:hover .table-grid-file__e {
+            display: flex;
+        }
+    }
+    &__name {
+        grid-column-start: 2;
+        cursor: pointer;
+        i {
+            margin-left: 10px;
+            font-size: .7rem
+        }
+    }
+    &__date {
+        grid-column-start: 4;
+        justify-self: center;
+        cursor: pointer;
+        i {
+            margin-left: 10px;
+            font-size: .7rem
+        }
+    }
+    &__size {
+        grid-column-start: 5;
+        justify-self: center;
+        cursor: pointer;
+        i {
+            margin-left: 10px;
+            font-size: .7rem
+        }
+    }
+
+
+    &__q {
+        justify-self: center;
+        font-size: 1.5rem;
+    }
+    &__w {
+        a {
+            color: white;
+            font-size: 10pt;
+            transition: all .1s linear;
+        }
+        .file__rename {
+            margin-left: 10px;
+            transition: all .1s linear;
+            display: none;
+            &:hover {
+                transform: scale(1.3);
+                color: $color-line;
+            }
+        }
+    }
+    &__e {
+        grid-column-start: 3;
+        justify-self: center;
+        font-size: 1rem;
+        display: none;
+        span {
+            transition: all .1s linear;
+            margin: 0 5px;
+            color: white;
+            font-size: 1rem;
+            &:hover {
+                transform: scale(1.3);
+                color: $color-line;
+            }
+        }
+    }
+    &__r {
+        grid-column-start: 4;
+        justify-self: center;
+    }
+    &__t {
+        grid-column-start: 5;
+        justify-self: center;
+    }
+}
+
+.col-3 {
+    div {
+        p {
+            color: $color-icon-active;
+            font-size: .8rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+
+
+
+.free-space {
+    width: 100%;
+    &__header {
+
+    }
+    &__body {
+        margin-top: 20px;
+        ul {
+            margin-top: 10px;
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 0.8rem;
+                margin-right: 10px;
+                font-weight: 600;
+                div {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                .li-interest {
+                    margin-left: 5px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    &__loader {
+        background: $color-border;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        height: 8px;
+    }
+    &__load {
+        background: #9AA7B8;
+        width: 37%;
+        height: 100%;
+    }
+}
+
+.li-circle-color {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.yellow {
+    background-color: #9AA7B8;
+}
+
+.orange {
+    background-color: $color-border;
+}
+
+.fiolet {
+    background-color: $color-fiolet;
+}
+
+.black {
+    background-color: $color-navbar;
+}
+
+
+.popup-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.3;
+}
+.popup {
+    background: $color-border;
+    position: relative;
+    z-index: 2;
+    input {
+        border: none;
+        background: transparent;
+        padding-left: 0;
+    }
+    .rem-one {
+        i {
+            transition: all .1s linear;
+            margin: 0 5px;
+            &:hover {
+                transform: scale(1.3);
+                color: $color-line;
+            }
+        }
+    }
+}
+
+
+
+.drag-and-drop {
+    width: 100%;
+    height: 240px;
+    border: none!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    > div {
+        display: flex;
+        position: absolute;
+        width: calc(100% - 6.5px);
+        height: calc(100% - 6px);
+        background: #161b22;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            font-family: FontAwesomeLight;
+            content: '\f0ea';
+            font-size: 2rem;
+        }
+
+        &::after {
+            content: 'Paste File';
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+.rright {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    button {
+        border-radius: 6px; 
+        background: transparent;
+        border: 1px solid $color-border;
+        color: $color-font;
+        cursor: pointer;
+        i {
+            margin-right: 10px;
+        }
+    }
+    button:last-child {
+        margin-left: 10px;
+    }
+}
+
+
+// .disk-navbar {
+//     display: flex;
+
+//     button {
+//         background: $color-back;
+//         border: none;
+//         margin-right: 10px;
+//         color: $color-font;
+//         border-radius: 6px;
+//         cursor: pointer;
+//         &:last-child {
+//             margin: 0 0 0 10px;
+//         }
+//     }
+
+//     &__path {
+//         background: $color-back;
+//         width: 100%;
+//         height: 100%;
+//         padding: 5px 20px;
+//         border-radius: 6px;
+//         font-weight: 300;
+//     }
+
+//     &__search {
+//         display: flex;
+//         position: relative;
+//         input {
+//             background: transparent;
+//             border: none;
+//             height: 0;
+//             padding: 10px 0;
+//             padding-right: 35px;
+//         }
+//     }
+// }
+
+
+
+
+
+.fileplate {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.file-plate {
+    text-align: center;
+    width: 100px;
+    height: fit-content;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 6px;
+    &__q {
+        text-align: center;
+        font-size: 3rem;
+    }
+    &__w {
+        word-break: break-all;
+        font-size: .8rem;
+
+    }
+    &__e {
+        display: none;
+        justify-content: center;
+        font-size: 1rem;
+        margin-top: 5px;
+        span {
+            margin: 0 2px;
+            transition: all .1s linear;
+            color: white;
+            font-size: 1rem;
+        }
+        span:hover {
+            color: $color-line;
+            transform: scale(1.3);
+        }
+    }
+    &:hover .file-plate__e {
+        display: flex;
+    }
+    &:hover .file-plate__w {
+        display: none;
+    }
+
+    &__input {
+        margin: 0 5px;
+        input {
+            padding: 0 10px 15px 10px;
+        }
+    }
+}
+
+.file-enter-active {
+    animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.none {
+    display: none!important;
+}

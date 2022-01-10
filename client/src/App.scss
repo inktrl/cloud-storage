@@ -1,0 +1,291 @@
+@import '../src/assets/css/colors';
+
+:root {
+    --margin: 20px;
+    --border-radius: 6px;
+
+    --font-size-small:       0.8rem;
+    --font-size-medium:      1.0rem;
+    --font-size-big:         1.6rem;
+
+    --color-block:      #161B22;
+    --color-border:     #30363D;
+    --color-background: #0D1117;
+    --color-url:        #58A6FF;
+    --color-font:       #C9D1D9;
+    --color-font-disabled: #8B949E;
+    --color-white:      #FFFFFF;
+    --color-light-pink: #F78166;
+    --color-green:      #238636;
+
+    --color-button-light-background: #9AA7B8;
+    --color-button-light-border:     #6F7884;
+
+    --color-hover-black:#1E222A;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-font);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1350px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.flex-1 {
+    flex: 1;
+    margin: 50px auto;
+}
+
+.container {
+    background: var(--color-block);
+    padding: var(--margin);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+.col-7 {
+    width: 75%;
+    margin-right: 25px;
+}
+
+.col-3 {
+    width: 25%;
+    min-width: 320px;
+}
+
+.col-5 {
+    width: 50%;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+hr { 
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid var(--color-border);
+    margin: 2em 0; 
+    padding: 0; 
+}
+
+input {
+    border: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-background);
+    padding: 10px;
+    color: var(--color-white);
+    width: 100%;
+}
+
+.invalid {
+    border: 1px solid var(--color-light-pink);
+    border-bottom: 2px solid var(--color-light-pink);
+}
+
+.inputCloneCopy {
+    position: relative;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 15px;
+    color: var(--color-font-disabled);
+    
+    > span {
+        font-size: var(--font-size-small);
+        padding: 5px 15px;   
+    }
+
+    > div {
+        background-color: transparent;
+        padding: 2px 15px;
+        border-left: 1px solid var(--color-border);
+        background-color: var(--color-block);
+        cursor: pointer;
+
+        > span {
+            > i {
+                font-size: var(--font-size-small);
+            }
+        } 
+    }
+}
+
+button {
+    border-radius: var(--border-radius);
+    padding: 6px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid var(--color-button-light-border);
+    color: var(--color-block);
+    background: var(--color-button-light-background);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all .1s linear;
+}
+
+.button-light {
+    border: 1px solid var(--color-button-light-border)!important;
+    background: var(--color-button-light-background)!important;
+    color: var(--color-block)!important;
+}
+
+.button-dark {
+    border: 1px solid var(--color-border)!important;
+    background-color: var(--color-block)!important;
+    color: var(--color-font)!important;
+}
+  
+a {
+    font-size: var(--font-size-small);
+    color: var(--color-url);
+}
+
+.button {
+    padding: 6px 20px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-block);
+    font-weight: 600;
+    transition: all .1s linear;
+    color: var(--color-font);
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: var(--color-hover-black);
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+#toast-container {
+    top: 1%;
+    right: 1%;
+    position: absolute;
+    font-size: var(--font-size-small);
+
+    .toast {
+        background: #B24A49;
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: 1px solid #652A29;
+        margin-top: 10px;
+    }
+}
+
+.l-margin {
+    margin-left: 15px;
+}
+
+.r-margin {
+    margin-right: 15px;
+}
+
+.fa-spinner {
+    animation: spin 2s linear infinite;
+}
+
+.dashed {
+    background: 
+    linear-gradient(90deg, var(--color-border) 50%, var(--color-block) 50%),
+    linear-gradient(0deg, var(--color-border) 50%, var(--color-block) 50%),
+    linear-gradient(90deg, var(--color-border) 50%, var(--color-block) 50%),
+    linear-gradient(0deg, var(--color-border) 50%, var(--color-block) 50%);
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-size: 15px 3px, 3px 15px, 15px 3px, 3px 15px;
+  background-position: left top, right top, left bottom, left top;
+  padding: 4px;
+  animation: border-dance 13s infinite linear;
+}
+
+@keyframes border-dance 
+{
+  0%
+  {
+    background-position: left top, right top, right bottom, left bottom;
+  }
+  100% 
+  {
+    background-position: right top, right bottom, left bottom, left top;
+  }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .wrapper {
+        display: flex!important;
+        flex-direction: column!important;
+    }
+
+    .col-7 {
+        width: 100%;
+    }
+
+    .col-3 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .col-7 {
+        [class*="downloadPage_mainColumn__"] {
+            flex-direction: column;
+
+            [class*="downloadPage_colLeft__"] {
+                border-radius: 6px 6px 0 0;
+                border: 1px solid #30363D;
+                border-bottom: none;
+                width: 100%;
+                padding: 25px;
+                align-items: flex-start;
+            }
+
+            [class*="downloadPage_colRight__"] {
+                width: 100%;
+
+                [class*="downloadPage_infoContainer__"] {
+                    border-radius: 0 0 6px 6px;
+                }
+            }
+        }
+    }
+}

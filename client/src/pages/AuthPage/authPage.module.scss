@@ -1,0 +1,44 @@
+@import '../../assets/css/colors.scss';
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+
+    > .mainContainer__left {
+        margin: auto 100px;
+
+        > i {
+            font-size: 10rem;
+        }
+    }
+
+    > .mainContainer__right {
+        display: flex;
+        text-align: center;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        > form {
+            margin: auto 100px;
+
+            > .row {
+                width: 300px;
+
+                &:last-child {
+                    margin-top: var(--margin);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 5px;
+                }
+
+                input {
+                    margin-top: var(--margin);
+                }
+            }
+        }
+    }
+}

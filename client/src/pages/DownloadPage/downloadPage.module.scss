@@ -1,0 +1,73 @@
+@import '../../assets/css/colors.scss';
+
+.mainColumn {
+    display: flex;
+
+    > .colLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+        border-radius: 6px 0 0 6px;
+        border: 1px solid $color-border;
+        border-right: 0;
+        background: $color-navbar;
+        width: 25%;
+    }
+
+    > .colRight {
+        margin-right: 0;
+        position: relative;
+        width: 75%;
+
+        > .infoContainer {
+            border-radius: 0 6px 6px 0;
+            border: 1px solid $color-border;
+            padding: 20px;
+            font-size: .9rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: wrap;
+            min-height: 250px;
+
+            > .infoContainer__header {
+                > h1 {
+                    overflow-wrap: anywhere;
+                }
+                > .row {
+                    > strong {
+                        margin: 0 5px;
+                    }
+                }
+            }
+
+            > .infoContainer__footer {
+                > button {
+                    margin-top: 25px;
+                    border-radius: 6px;
+                    transition: all .5s linear;
+                    background: #161B22;
+                    border: 1px solid #30363d;
+                    color: #c9d1d9;
+                    margin-right: 20px;
+                    position: relative;
+                    transition: all .1s linear;
+                    i {
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        background: #1E222A;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}

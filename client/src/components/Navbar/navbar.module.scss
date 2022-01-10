@@ -1,0 +1,83 @@
+nav {
+    height: 210px;
+    background-color: var(--color-block);
+    border-bottom: 1px solid var(--color-border);
+
+    > .navbar {
+        padding-top: 120px;
+
+        > .brandLogo {
+            display: flex;
+    
+            > img {
+                height: 110px;
+                width: 110px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+    
+            > .brandLogo__container {
+                margin: auto 20px;
+    
+                > p {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+    
+                > span {
+                    background: #9aa7b8;
+                    color: #222630;
+                    border-radius: 3px;
+                    text-align: center;
+                    font-size: 14px;
+                    width: fit-content;
+                    padding: 0 8px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        > .profile {
+            position: absolute;
+            right: 25px;
+            top: 160px;
+            display: flex;
+
+            > .activeMenu {
+                border-bottom: 2px solid var(--color-light-pink);
+            }
+
+            > a {
+                display: inline;
+                padding: 11.5px 16px;
+                text-align: center;
+                white-space: nowrap;
+                border-bottom: 2px solid transparent;
+                text-decoration: none;
+                color: white!important;
+                line-height: 2;
+                font-weight: 300;
+
+                &:hover {
+                    border-bottom: 2px solid var(--color-border);
+                }
+
+                > i {
+                    margin-right: 10px;
+                    font-size: 1.1rem;
+                    color: var(--color-font);
+                }
+
+                > span {
+                    font-weight: 600;
+                }
+            }
+        }
+        
+    }
+}
+
+a {
+    text-decoration: none;
+}

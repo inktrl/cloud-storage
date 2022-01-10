@@ -1,0 +1,61 @@
+@import '../assets/css/colors.scss';
+
+.navButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin);
+
+    > .navButtons__left {
+        display: flex;
+        align-items: flex-end;
+
+        > div {
+            margin-right: 20px;
+
+            > i {
+                font-weight: bold;
+                padding-right: 5px;
+            }
+
+            > span {
+                font-size: .8rem;
+                color: $color-icon-active;
+            }
+        }
+    }
+
+    > .navButtons__right {
+        display: flex;
+
+        > .uploadFile {
+            display: inline-flex;
+            padding: 0;
+            margin-right: 15px;
+            
+            > label {
+                cursor: pointer;
+                padding: 6px 20px;
+
+                > i {
+                    margin-right: 10px;
+                }
+            }
+            
+            > input {
+                display: none;
+            }
+        }
+
+        > button {
+            background-color: var(--color-button-light-background);
+            color: var(--color-background)
+        }
+
+        > a {
+            background-color: var(--color-button-light-background);
+            border-color: var(--color-button-light-border);
+            color: var(--color-background);
+        }
+    }
+}
